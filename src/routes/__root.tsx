@@ -79,18 +79,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Barbearia — Agenda e Financeiro" },
+      { title: "Audace Barbearia — Agenda e Financeiro" },
       {
         name: "description",
         content:
-          "Sistema completo para barbearia: agenda de agendamentos, clientes, pacotes, produtos e controle financeiro.",
+          "Sistema da Audace Barbearia: agenda de agendamentos, clientes, pacotes, produtos e controle financeiro.",
       },
-      { name: "author", content: "Barbearia" },
-      { property: "og:title", content: "Barbearia — Agenda e Financeiro" },
+      { name: "author", content: "Audace Barbearia" },
+      { property: "og:title", content: "Audace Barbearia — Agenda e Financeiro" },
       {
         property: "og:description",
         content:
-          "Sistema completo para barbearia: agenda de agendamentos, clientes, pacotes, produtos e controle financeiro.",
+          "Sistema da Audace Barbearia: agenda de agendamentos, clientes, pacotes, produtos e controle financeiro.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -106,7 +106,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
   shellComponent: RootShell,
