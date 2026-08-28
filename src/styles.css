@@ -45,52 +45,52 @@
 }
 
 :root {
-  --radius: 0.75rem;
-  --background: oklch(0.165 0.014 70);
-  --foreground: oklch(0.94 0.018 90);
-  --card: oklch(0.215 0.017 70);
-  --card-foreground: oklch(0.94 0.018 90);
-  --popover: oklch(0.215 0.017 70);
-  --popover-foreground: oklch(0.94 0.018 90);
-  --primary: oklch(0.8 0.13 85);
-  --primary-foreground: oklch(0.18 0.03 70);
-  --secondary: oklch(0.28 0.02 70);
-  --secondary-foreground: oklch(0.94 0.018 90);
-  --muted: oklch(0.26 0.018 70);
-  --muted-foreground: oklch(0.68 0.025 80);
-  --accent: oklch(0.32 0.03 75);
-  --accent-foreground: oklch(0.94 0.018 90);
+  --radius: 0.9rem;
+  --background: oklch(0.13 0.008 150);
+  --foreground: oklch(0.95 0.004 150);
+  --card: oklch(0.22 0.012 150 / 0.55);
+  --card-foreground: oklch(0.95 0.004 150);
+  --popover: oklch(0.2 0.012 150 / 0.92);
+  --popover-foreground: oklch(0.95 0.004 150);
+  --primary: oklch(0.62 0.055 150);
+  --primary-foreground: oklch(0.15 0.01 150);
+  --secondary: oklch(0.3 0.01 150 / 0.6);
+  --secondary-foreground: oklch(0.95 0.004 150);
+  --muted: oklch(0.28 0.008 150 / 0.55);
+  --muted-foreground: oklch(0.72 0.008 150);
+  --accent: oklch(0.35 0.02 150 / 0.6);
+  --accent-foreground: oklch(0.95 0.004 150);
   --destructive: oklch(0.58 0.19 25);
-  --destructive-foreground: oklch(0.95 0.01 90);
-  --success: oklch(0.68 0.14 155);
-  --success-foreground: oklch(0.16 0.03 155);
-  --border: oklch(0.31 0.02 70);
-  --input: oklch(0.31 0.02 70);
-  --ring: oklch(0.7 0.1 85);
+  --destructive-foreground: oklch(0.96 0.01 90);
+  --success: oklch(0.68 0.13 155);
+  --success-foreground: oklch(0.15 0.03 155);
+  --border: oklch(0.85 0.01 150 / 0.14);
+  --input: oklch(0.85 0.01 150 / 0.16);
+  --ring: oklch(0.62 0.055 150);
 }
 
 .dark {
-  --background: oklch(0.165 0.014 70);
-  --foreground: oklch(0.94 0.018 90);
-  --card: oklch(0.215 0.017 70);
-  --card-foreground: oklch(0.94 0.018 90);
-  --popover: oklch(0.215 0.017 70);
-  --popover-foreground: oklch(0.94 0.018 90);
-  --primary: oklch(0.8 0.13 85);
-  --primary-foreground: oklch(0.18 0.03 70);
-  --secondary: oklch(0.28 0.02 70);
-  --secondary-foreground: oklch(0.94 0.018 90);
-  --muted: oklch(0.26 0.018 70);
-  --muted-foreground: oklch(0.68 0.025 80);
-  --accent: oklch(0.32 0.03 75);
-  --accent-foreground: oklch(0.94 0.018 90);
+  --background: oklch(0.13 0.008 150);
+  --foreground: oklch(0.95 0.004 150);
+  --card: oklch(0.22 0.012 150 / 0.55);
+  --card-foreground: oklch(0.95 0.004 150);
+  --popover: oklch(0.2 0.012 150 / 0.92);
+  --popover-foreground: oklch(0.95 0.004 150);
+  --primary: oklch(0.62 0.055 150);
+  --primary-foreground: oklch(0.15 0.01 150);
+  --secondary: oklch(0.3 0.01 150 / 0.6);
+  --secondary-foreground: oklch(0.95 0.004 150);
+  --muted: oklch(0.28 0.008 150 / 0.55);
+  --muted-foreground: oklch(0.72 0.008 150);
+  --accent: oklch(0.35 0.02 150 / 0.6);
+  --accent-foreground: oklch(0.95 0.004 150);
   --destructive: oklch(0.58 0.19 25);
-  --destructive-foreground: oklch(0.95 0.01 90);
-  --success: oklch(0.68 0.14 155);
-  --success-foreground: oklch(0.16 0.03 155);
-  --border: oklch(0.31 0.02 70);
-  --input: oklch(0.31 0.02 70);
-  --ring: oklch(0.7 0.1 85);
+  --destructive-foreground: oklch(0.96 0.01 90);
+  --success: oklch(0.68 0.13 155);
+  --success-foreground: oklch(0.15 0.03 155);
+  --border: oklch(0.85 0.01 150 / 0.14);
+  --input: oklch(0.85 0.01 150 / 0.16);
+  --ring: oklch(0.62 0.055 150);
 }
 
 @layer base {
@@ -104,6 +104,10 @@
 
   body {
     background-color: var(--color-background);
+    background-image:
+      radial-gradient(60rem 40rem at 15% -10%, oklch(0.62 0.055 150 / 0.16), transparent 70%),
+      radial-gradient(50rem 35rem at 110% 10%, oklch(0.8 0.01 150 / 0.08), transparent 70%);
+    background-attachment: fixed;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -116,10 +120,25 @@
   }
 }
 
+@layer components {
+  [data-slot="card"],
+  [data-slot="dialog-content"],
+  [data-slot="popover-content"],
+  [data-slot="select-content"] {
+    backdrop-filter: blur(18px) saturate(140%);
+  }
+}
+
 @layer utilities {
   .font-display {
     font-family: var(--font-display);
     letter-spacing: 0.04em;
+  }
+
+  .glass {
+    background-color: oklch(0.22 0.012 150 / 0.5);
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(18px) saturate(140%);
   }
 
   .text-balance {
