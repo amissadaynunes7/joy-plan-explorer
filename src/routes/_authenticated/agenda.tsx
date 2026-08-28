@@ -99,7 +99,7 @@ function AgendaPage() {
       servico_id: string;
       inicia_em: string;
       preco: number;
-      observacoes?: string;
+      observacoes?: string | undefined;
     }) => createAgendamento({ data: input }),
     onSuccess: () => {
       invalidar();
