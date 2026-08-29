@@ -37,7 +37,7 @@ import {
 export const Route = createFileRoute("/_authenticated/pacotes")({
   head: () => ({
     meta: [
-      { title: "Pacotes — Barbearia" },
+      { title: "Pacotes — Audace Barbearia" },
       { name: "description", content: "Pacotes de sessões vendidos aos clientes da barbearia." },
     ],
   }),

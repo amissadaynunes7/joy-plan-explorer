@@ -13,6 +13,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useRouter } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
+import logoAsset from "@/assets/audace-logo.jpg.asset.json";
 
 const NAV = [
   { to: "/agenda", label: "Agenda", icon: CalendarDays },
@@ -42,15 +43,22 @@ function AppLayout() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
-        <div className="mx-auto flex h-14 max-w-3xl items-center justify-between px-4">
-          <Link to="/agenda" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-              <Scissors className="h-4 w-4" />
-            </div>
-            <span className="font-display text-2xl tracking-wide text-foreground">
-              Barbearia
+    <div className="min-h-screen">
+      <header className="sticky top-0 z-40 border-b border-border bg-background/50 backdrop-blur-xl">
+        <div className="mx-auto flex h-16 max-w-3xl items-center justify-between px-4">
+          <Link to="/agenda" className="flex items-center gap-2.5">
+            <img
+              src={logoAsset.url}
+              alt="Logo da Audace Barbearia"
+              className="h-10 w-10 rounded-xl object-cover ring-1 ring-border"
+            />
+            <span className="flex flex-col leading-none">
+              <span className="font-display text-2xl tracking-widest text-foreground">
+                AUDACE
+              </span>
+              <span className="text-[10px] font-semibold tracking-[0.3em] text-primary">
+                BARBEARIA
+              </span>
             </span>
           </Link>
           <div className="flex items-center gap-2">
@@ -68,7 +76,7 @@ function AppLayout() {
         <Outlet />
       </main>
 
-      <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-card/95 backdrop-blur">
+      <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-card/40 backdrop-blur-xl">
         <div className="mx-auto grid max-w-3xl grid-cols-6">
           {NAV.map((item) => (
             <Link

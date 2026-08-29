@@ -1,6 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
-import { Scissors, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
+import logoAsset from "@/assets/audace-logo.jpg.asset.json";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,12 +18,12 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Entrar — Barbearia" },
+      { title: "Entrar — Audace Barbearia" },
       {
         name: "description",
         content: "Acesse o sistema de agenda e financeiro da sua barbearia.",
       },
-      { property: "og:title", content: "Entrar — Barbearia" },
+      { property: "og:title", content: "Entrar — Audace Barbearia" },
       {
         property: "og:description",
         content: "Acesse o sistema de agenda e financeiro da sua barbearia.",
@@ -79,16 +80,20 @@ function AuthPage() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-background px-4">
+    <div className="flex min-h-screen flex-col items-center justify-center px-4">
       <div className="mb-8 flex flex-col items-center gap-3">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-lg shadow-primary/20">
-          <Scissors className="h-8 w-8" />
-        </div>
-        <h1 className="font-display text-4xl tracking-wide text-foreground">Barbearia</h1>
+        <img
+          src={logoAsset.url}
+          alt="Logo da Audace Barbearia"
+          className="h-24 w-24 rounded-2xl object-cover ring-1 ring-border shadow-lg shadow-primary/20"
+        />
+        <h1 className="font-display text-4xl tracking-[0.2em] text-foreground">AUDACE</h1>
+        <p className="text-xs font-semibold tracking-[0.35em] text-primary">BARBEARIA</p>
         <p className="text-sm text-muted-foreground">Agenda, clientes e financeiro</p>
       </div>
 
-      <Card className="w-full max-w-sm border-border bg-card">
+      <Card className="w-full max-w-sm border-border glass">
+
         <CardHeader>
           <CardTitle>{modo === "entrar" ? "Entrar no sistema" : "Criar conta do dono"}</CardTitle>
           <CardDescription>
