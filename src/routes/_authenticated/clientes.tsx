@@ -31,7 +31,7 @@ import {
 export const Route = createFileRoute("/_authenticated/clientes")({
   head: () => ({
     meta: [
-      { title: "Clientes — Barbearia" },
+      { title: "Clientes — Audace Barbearia" },
       { name: "description", content: "Cadastro e histórico de clientes da barbearia." },
     ],
   }),

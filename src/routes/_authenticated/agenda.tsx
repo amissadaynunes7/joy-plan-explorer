@@ -41,7 +41,7 @@ import { Badge } from "@/components/ui/badge";
 export const Route = createFileRoute("/_authenticated/agenda")({
   head: () => ({
     meta: [
-      { title: "Agenda — Barbearia" },
+      { title: "Agenda — Audace Barbearia" },
       { name: "description", content: "Agenda diária de agendamentos da barbearia." },
     ],
   }),

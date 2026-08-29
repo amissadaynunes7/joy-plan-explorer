@@ -41,7 +41,7 @@ import {
 export const Route = createFileRoute("/_authenticated/financeiro")({
   head: () => ({
     meta: [
-      { title: "Financeiro — Barbearia" },
+      { title: "Financeiro — Audace Barbearia" },
       { name: "description", content: "Receitas, despesas e saldo do mês da barbearia." },
     ],
   }),

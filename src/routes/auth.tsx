@@ -18,12 +18,12 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Entrar — Barbearia" },
+      { title: "Entrar — Audace Barbearia" },
       {
         name: "description",
         content: "Acesse o sistema de agenda e financeiro da sua barbearia.",
       },
-      { property: "og:title", content: "Entrar — Barbearia" },
+      { property: "og:title", content: "Entrar — Audace Barbearia" },
       {
         property: "og:description",
         content: "Acesse o sistema de agenda e financeiro da sua barbearia.",
