@@ -13,6 +13,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useRouter } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
+import logoAsset from "@/assets/audace-logo.jpg.asset.json";
 
 const NAV = [
   { to: "/agenda", label: "Agenda", icon: CalendarDays },
