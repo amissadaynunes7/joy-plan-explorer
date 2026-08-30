@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import logoAsset from "@/assets/audace-logo.jpg.asset.json";
 
 const NAV = [
+  { to: "/dashboard", label: "Painel", icon: LayoutDashboard },
   { to: "/agenda", label: "Agenda", icon: CalendarDays },
   { to: "/clientes", label: "Clientes", icon: Users },
   { to: "/servicos", label: "Serviços", icon: Scissors },
