@@ -79,7 +79,7 @@ function AppLayout() {
       </main>
 
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-card/40 backdrop-blur-xl">
-        <div className="mx-auto grid max-w-3xl grid-cols-6">
+        <div className="mx-auto grid max-w-3xl grid-cols-7">
           {NAV.map((item) => (
             <Link
               key={item.to}
