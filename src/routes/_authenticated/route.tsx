@@ -1,5 +1,6 @@
 import { createFileRoute, Outlet, redirect, Link } from "@tanstack/react-router";
 import {
+  LayoutDashboard,
   CalendarDays,
   Users,
   Scissors,
@@ -16,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import logoAsset from "@/assets/audace-logo.jpg.asset.json";
 
 const NAV = [
+  { to: "/dashboard", label: "Painel", icon: LayoutDashboard },
   { to: "/agenda", label: "Agenda", icon: CalendarDays },
   { to: "/clientes", label: "Clientes", icon: Users },
   { to: "/servicos", label: "Serviços", icon: Scissors },
@@ -77,7 +79,7 @@ function AppLayout() {
       </main>
 
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-card/40 backdrop-blur-xl">
-        <div className="mx-auto grid max-w-3xl grid-cols-6">
+        <div className="mx-auto grid max-w-3xl grid-cols-7">
           {NAV.map((item) => (
             <Link
               key={item.to}
